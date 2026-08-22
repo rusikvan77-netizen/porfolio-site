@@ -1,0 +1,35 @@
+
+.btn-group .btn.active {
+    background: #47d651;
+    color: white;
+    border-color: #47d651;
+}
+
+.btn-group .btn.active:hover {
+    background: #2ea83a;
+    border-color: #2ea83a;
+}
+
+.btn-group .btn-outline-success.active {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.btn-group .btn-outline-danger.active {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.btn-group .btn-outline-warning.active {
+    background: #ffc107;
+    color: #212529;
+    border-color: #ffc107;
+}
+
+.btn-group .btn-outline-secondary.active {
+    background: #6c757d;
+    color: white;
+    border-color: #6c757d;
+}

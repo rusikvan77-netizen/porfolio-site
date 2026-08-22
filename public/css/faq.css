@@ -1,0 +1,461 @@
+/* resources/css/help-page.css */
+
+/* ===== ОБЩИЙ ФОН ===== */
+body {
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0f3460 100%) !important;
+    min-height: 100vh;
+    color: #ffffff !important;
+}
+h2{
+    text-align: center;
+    padding:15px;
+}
+.help-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ===== ЗАГОЛОВКИ ===== */
+.help-page h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff !important;
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.help-page h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #47d651, #2ea83a);
+    border-radius: 2px;
+}
+
+/* ===== FAQ СЕКЦИЯ ===== */
+.faq-section {
+    margin-bottom: 60px;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item:hover {
+    border-color: #47d651 !important;
+    box-shadow: 0 4px 20px rgba(71, 214, 81, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    cursor: pointer;
+    transition: background 0.3s;
+    user-select: none;
+}
+
+.faq-question:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.faq-question h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff !important;
+    margin: 0;
+    flex: 1;
+}
+
+.toggle-icon {
+    font-size: 24px;
+    color: #47d651 !important;
+    font-weight: 300;
+    transition: transform 0.3s;
+    display: inline-block;
+    width: 28px;
+    text-align: center;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 24px 24px;
+    color: rgba(255, 255, 255, 0.8) !important;
+    line-height: 1.8;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    animation: slideDown 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-answer p {
+    margin: 6px 0;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== АНИМАЦИЯ ===== */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ИНСТРУКЦИИ ===== */
+.guides-section {
+    margin-bottom: 60px;
+}
+
+.guide-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.guide-card:hover {
+    border-color: #47d651 !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.guide-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff !important;
+    margin: 0 0 16px 0;
+}
+
+.guide-card ol {
+    padding-left: 24px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8) !important;
+    line-height: 2.2;
+}
+
+.guide-card ol li::marker {
+    color: #47d651;
+    font-weight: 700;
+}
+
+.guide-card ol li strong {
+    color: #ffffff !important;
+}
+
+/* ===== КОНТАКТЫ ===== */
+.contacts-section {
+    margin-bottom: 60px;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px;
+    padding: 30px 24px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-card:hover {
+    border-color: #47d651 !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+.contact-card i {
+    font-size: 40px;
+    color: #47d651 !important;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.contact-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff !important;
+    margin: 0 0 8px 0;
+}
+
+.contact-card p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.contact-card p:last-child {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 13px;
+}
+
+/* ===== ОПЛАТА ===== */
+.payment-section {
+    margin-bottom: 60px;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.payment-method {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.payment-method:hover {
+    border-color: #47d651 !important;
+    box-shadow: 0 4px 20px rgba(71, 214, 81, 0.1);
+    transform: translateY(-3px);
+}
+
+.payment-method i {
+    font-size: 32px;
+    color: #47d651 !important;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.payment-method span {
+    display: block;
+    font-weight: 600;
+    color: #ffffff !important;
+    font-size: 15px;
+}
+
+.payment-method small {
+    display: block;
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* ===== ДОСТАВКА И ВОЗВРАТ ===== */
+.delivery-section {
+    margin-bottom: 60px;
+}
+
+.info-block {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 16px;
+    transition: all 0.3s;
+}
+
+.info-block:hover {
+    border-color: #47d651 !important;
+}
+
+.info-block h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff !important;
+    margin: 0 0 12px 0;
+}
+
+.info-block ul {
+    padding-left: 24px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8) !important;
+    line-height: 2;
+}
+
+.info-block ul li::marker {
+    color: #47d651;
+}
+
+/* ===== СТАТУСЫ ЗАКАЗОВ ===== */
+.status-section {
+    margin-bottom: 40px;
+}
+
+.status-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.status-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px;
+    padding: 20px 24px;
+    transition: all 0.3s;
+}
+
+.status-item:hover {
+    border-color: #47d651 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.status-item .badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.badge-warning {
+    background: rgba(214, 158, 46, 0.3) !important;
+    color: #f6e05e !important;
+}
+
+.badge-info {
+    background: rgba(49, 130, 206, 0.3) !important;
+    color: #63b3ed !important;
+}
+
+.badge-success {
+    background: rgba(56, 161, 105, 0.3) !important;
+    color: #68d391 !important;
+}
+
+.badge-danger {
+    background: rgba(229, 62, 62, 0.3) !important;
+    color: #fc8181 !important;
+}
+
+.status-item p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 14px;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+    .help-container {
+        padding: 20px 15px;
+    }
+
+    .help-page h2 {
+        font-size: 22px;
+    }
+
+    .faq-question {
+        padding: 14px 18px;
+    }
+
+    .faq-question h3 {
+        font-size: 14px;
+    }
+
+    .faq-answer {
+        padding: 0 18px 18px;
+        font-size: 14px;
+    }
+
+    .guide-card {
+        padding: 18px 20px;
+    }
+
+    .guide-card h3 {
+        font-size: 16px;
+    }
+
+    .guide-card ol {
+        font-size: 14px;
+        padding-left: 18px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .status-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .payment-method {
+        padding: 16px;
+    }
+
+    .payment-method i {
+        font-size: 24px;
+    }
+
+    .payment-method span {
+        font-size: 13px;
+    }
+
+    .contact-card i {
+        font-size: 30px;
+    }
+
+    .status-item {
+        padding: 14px 18px;
+    }
+}
+
+/* ===== СКРОЛЛ-БАР ===== */
+.help-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.help-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.help-container::-webkit-scrollbar-thumb {
+    background: #47d651;
+    border-radius: 4px;
+}
+
+.help-container::-webkit-scrollbar-thumb:hover {
+    background: #2ea83a;
+}

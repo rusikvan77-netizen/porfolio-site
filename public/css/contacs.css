@@ -1,0 +1,444 @@
+/* resources/css/contacts.css */
+
+/* ===== ОБЩИЙ ФОН ===== */
+.contacts-page {
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0f3460 100%);
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.contacts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ===== HERO ===== */
+.contacts-hero {
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0f3460 100%);
+    padding: 80px 0 60px;
+    text-align: center;
+    border-bottom: 3px solid #47d651;
+    position: relative;
+    overflow: hidden;
+}
+
+.contacts-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%2347d651' fill-opacity='0.03'%3E%3Cpath d='M10 10 L30 10 L30 30 L10 30 Z'/%3E%3Cpath d='M50 50 L70 50 L70 70 L50 70 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.contacts-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.contacts-highlight {
+    background: linear-gradient(135deg, #47d651, #2ea83a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contacts-subtitle {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== ЗАГОЛОВКИ ===== */
+.contacts-page h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.contacts-page h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #47d651, #2ea83a);
+    border-radius: 2px;
+}
+
+/* ===== КОНТАКТНАЯ ИНФОРМАЦИЯ ===== */
+.info-section {
+    margin-bottom: 60px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-card:hover {
+    border-color: #47d651;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(71, 214, 81, 0.1);
+}
+
+.info-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.info-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+}
+
+.info-card p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+.info-card p a {
+    color: #47d651;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-card p a:hover {
+    color: #2ea83a;
+    text-decoration: underline;
+}
+
+.info-desc {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 13px !important;
+}
+
+/* ===== СОЦИАЛЬНЫЕ СЕТИ ===== */
+.social-section {
+    margin-bottom: 60px;
+}
+
+.social-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 24px 16px;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.social-card:hover {
+    transform: translateY(-6px);
+    border-color: currentColor;
+}
+
+.social-card i {
+    font-size: 32px;
+}
+
+.social-card span {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.social-card small {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+}
+
+.social-card.telegram {
+    color: #0088cc;
+}
+
+.social-card.vk {
+    color: #4C75A3;
+}
+
+.social-card.youtube {
+    color: #FF0000;
+}
+
+.social-card.instagram {
+    color: #E1306C;
+}
+
+.social-card.twitter {
+    color: #1DA1F2;
+}
+
+.social-card.discord {
+    color: #5865F2;
+}
+
+.social-card.telegram:hover {
+    background: rgba(0, 136, 204, 0.1);
+}
+
+.social-card.vk:hover {
+    background: rgba(76, 117, 163, 0.1);
+}
+
+.social-card.youtube:hover {
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.social-card.instagram:hover {
+    background: rgba(225, 48, 108, 0.1);
+}
+
+.social-card.twitter:hover {
+    background: rgba(29, 161, 242, 0.1);
+}
+
+.social-card.discord:hover {
+    background: rgba(88, 101, 242, 0.1);
+}
+
+/* ===== КАРТА ===== */
+.map-section {
+    margin-bottom: 60px;
+}
+
+.map-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.map-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 400px;
+}
+
+/* ===== ФОРМА ===== */
+.form-section {
+    margin-bottom: 60px;
+}
+
+.form-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.required {
+    color: #e53e3e;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #47d651;
+    box-shadow: 0 0 0 3px rgba(71, 214, 81, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 40px;
+    background: linear-gradient(135deg, #47d651, #2ea83a);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(71, 214, 81, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* ===== FAQ SHORT ===== */
+
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 992px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .contacts-title {
+        font-size: 32px;
+    }
+
+    .contacts-subtitle {
+        font-size: 16px;
+    }
+
+    .contacts-page h2 {
+        font-size: 22px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .info-card {
+        padding: 20px 16px;
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .social-card {
+        padding: 16px 12px;
+    }
+
+    .social-card i {
+        font-size: 24px;
+    }
+
+    .contact-form {
+        padding: 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .map-wrapper iframe {
+        height: 250px;
+    }
+
+    .contacts-container {
+        padding: 20px 15px;
+    }
+
+    .contacts-hero {
+        padding: 50px 0 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts-title {
+        font-size: 26px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-form {
+        padding: 16px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

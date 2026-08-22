@@ -1,0 +1,434 @@
+/* resources/css/about.css */
+
+/* ===== ОБЩИЙ ФОН ===== */
+.about-page {
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0f3460 100%);
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ===== HERO ===== */
+.about-hero {
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0f3460 100%);
+    padding: 80px 0 60px;
+    text-align: center;
+    border-bottom: 3px solid #47d651;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%2347d651' fill-opacity='0.03'%3E%3Cpath d='M10 10 L30 10 L30 30 L10 30 Z'/%3E%3Cpath d='M50 50 L70 50 L70 70 L50 70 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.about-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-highlight {
+    background: linear-gradient(135deg, #47d651, #2ea83a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-subtitle {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== ЗАГОЛОВКИ ===== */
+.about-page h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.about-page h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #47d651, #2ea83a);
+    border-radius: 2px;
+}
+
+/* ===== ИСТОРИЯ ===== */
+.history-section {
+    margin-bottom: 60px;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.history-content p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.history-content p strong {
+    color: #47d651;
+}
+
+.history-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    border-color: #47d651;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(71, 214, 81, 0.1);
+}
+
+.stat-number {
+    display: block;
+    font-size: 36px;
+    font-weight: 900;
+    color: #47d651;
+}
+
+.stat-label {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* ===== МИССИЯ ===== */
+.mission-section {
+    margin-bottom: 60px;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.mission-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.mission-card:hover {
+    border-color: #47d651;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(71, 214, 81, 0.1);
+}
+
+.mission-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.mission-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+}
+
+.mission-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===== КОМАНДА ===== */
+.team-section {
+    margin-bottom: 60px;
+}
+
+.team-description {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.team-card:hover {
+    border-color: #47d651;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(71, 214, 81, 0.1);
+}
+
+.team-avatar {
+    font-size: 56px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.team-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 4px 0;
+}
+
+.team-role {
+    display: block;
+    color: #47d651;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.team-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+}
+
+/* ===== ПРЕИМУЩЕСТВА ===== */
+.advantages-section {
+    margin-bottom: 60px;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.advantage-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 16px 20px;
+    transition: all 0.3s;
+}
+
+.advantage-item:hover {
+    border-color: #47d651;
+    background: rgba(71, 214, 81, 0.05);
+}
+
+.advantage-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.advantage-item h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 2px 0;
+}
+
+.advantage-item p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+
+
+/* ===== КОНТАКТЫ ===== */
+.contacts-section {
+    margin-bottom: 40px;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px 24px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.contact-card:hover {
+    border-color: #47d651;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(71, 214, 81, 0.1);
+}
+
+.contact-card i {
+    font-size: 40px;
+    color: #47d651;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.contact-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+}
+
+.contact-card p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.contact-card p:last-child {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 992px) {
+    .history-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mission-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+    .contacts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-subtitle {
+        font-size: 16px;
+    }
+
+    .about-page h2 {
+        font-size: 22px;
+    }
+
+    .history-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        padding: 20px 15px;
+    }
+
+    .about-hero {
+        padding: 50px 0 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 26px;
+    }
+
+    .history-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+}
