@@ -5,7 +5,7 @@
 -Laravel 12.x
 -MariaDB
 # Ссылка на сайт: 
-http://progamer.rgalin3u.beget.tech/
+http://rusvandal.com.swtest.ru/FirstPage
 
 
 
