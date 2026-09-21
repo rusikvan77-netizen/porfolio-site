@@ -5,7 +5,7 @@
 -Laravel 12.x
 -MariaDB
 # Ссылка на сайт: 
-http://rusvandal.com.swtest.ru/FirstPage
+http://rusvandal.com.swtest.ru/FirstPage (не работает. Продление хостинга в процессе)
 
 
 
